@@ -5,6 +5,7 @@ class BooksController < ApplicationController
     @books = Book.order('updated_at DESC')
   end
   def show
+    @book = Book.find(params[:id])
   end
   def new
     @book = Book.new

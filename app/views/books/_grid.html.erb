@@ -2,6 +2,7 @@
 <li class="grid">
 
   <% if book %>
+   <%= link_to book_path(book.id) do %>
     <div class="image">
       <% if book.image? %>
         <%= image_tag book.image.url %>
@@ -9,6 +10,7 @@
         <div class="empty">No image</div>
       <% end %>
     </div>
+  <% end %>
     <div class="title">
       <%= book.title %>
     </div>
