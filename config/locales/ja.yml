@@ -10,6 +10,9 @@ ja:
         caption: '説明'
         image: 'Book画像'
         
+      review:
+        user_id: '投稿者'
+        rank: '評価'
   
     errors:
       messages:
@@ -218,7 +221,11 @@ ja:
     created: '作成しました｡'
     updated: '更新しました｡'
     deleted: '削除しました｡'
-    bookmark:
-      created: 'ブックマークに追加しました｡'
-      deleted: 'ブックマークを削除しました｡'
     
+  bookmark:
+    created: 'ブックマークに追加しました｡'
+    deleted: 'ブックマークを削除しました｡'
+  
+  review:
+    created: 'レビューを追加しました｡'
+    deleted: 'レビューを削除しました｡'
