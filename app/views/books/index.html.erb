@@ -1,9 +1,9 @@
 <div class="wrapper book_index">
-    <hr class="bold">
+  <hr class="bold">
     
-    <div class="header">Bookリスト</div>
-    <%= render 'books/social_buttons', url: request.url%>
-    <hr>
+  <div class="header">Bookリスト</div>
+  <%= render 'books/social_buttons', url: request.url%>
+  <hr>
     
   <% if  user_signed_in? %>
     <div class="filter">
@@ -14,12 +14,12 @@
     <hr>
   <% end %>
 
-    <div>
-    <%= button_to 'Bookを登録', new_book_path, method: :get, class: 'btn btn-primary' %>
-    </div>
-    <ul class="grid_wrapper clearfix">
-        <% @books.each do |book| %>
-            <%= render 'books/grid', book: book %>
-        <% end %>
-    </ul>
+  <div>
+  <%= button_to 'Bookを登録', new_book_path, method: :get, class: 'btn btn-primary' %>
+  </div>  
+  <ul class="grid_wrapper clearfix">
+    <% @books.each do |book| %>
+      <%= render 'books/grid', book: book %>
+    <% end %>
+  </ul>
 </div>
