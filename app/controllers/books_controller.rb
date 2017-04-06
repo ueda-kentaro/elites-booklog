@@ -63,11 +63,6 @@ class BooksController < ApplicationController
     redirect_to action: :index
   end
   
-  def filter_by_category
-    if params[:filter_category_id].present?
-      redirect_to action: :index, filter_category_id: params[:filter_category_id]
-    end
-  end
   private 
   def input_params
     params.require(:book).permit(:title, :author, :publisher, :price, :publish_date, :category_id, :caption, :image)
