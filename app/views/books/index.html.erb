@@ -13,7 +13,9 @@
     </div>
     <hr>
   <% end %>
-
+    <% @categories.each do |category| %>
+      <%= link_to category.name,  root_path(category_id: category.id), class: 'btn ' + (params[:category_id].to_i == category.id ? 'btn-primary' : 'btn-default') %>
+    <% end %>
     <div>
     <%= button_to 'Bookを登録', new_book_path, method: :get, class: 'btn btn-primary' %>
     </div>
