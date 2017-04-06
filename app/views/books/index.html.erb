@@ -1,9 +1,9 @@
 <div class="wrapper book_index">
-    <hr class="bold">
+  <hr class="bold">
     
-    <div class="header">Bookリスト</div>
-    <%= render 'books/social_buttons', url: request.url%>
-    <hr>
+  <div class="header">Bookリスト</div>
+  <%= render 'books/social_buttons', url: request.url%>
+  <hr>
     
   <% if  user_signed_in? %>
     <div class="filter">
@@ -13,6 +13,7 @@
     </div>
     <hr>
   <% end %>
+
     <% @categories.each do |category| %>
       <%= link_to category.name,  root_path(category_id: category.id), class: 'btn ' + (params[:category_id].to_i == category.id ? 'btn-primary' : 'btn-default') %>
     <% end %>
@@ -24,4 +25,5 @@
             <%= render 'books/grid', book: book %>
         <% end %>
     </ul>
+  <div>
 </div>
